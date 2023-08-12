@@ -6,7 +6,9 @@ def count_argv():
     i = 1
     arg_len = len(argv) - 1
 
-    if arg_len == 1:
+    if arg_len == 0:
+        print("{0} {1}.".format(arg_len, "arguments"))
+    elif arg_len == 1:
         print("{0} {1}:".format(arg_len, "argument"))
     else:
         print("{0} {1}:".format(arg_len, "arguments"))
