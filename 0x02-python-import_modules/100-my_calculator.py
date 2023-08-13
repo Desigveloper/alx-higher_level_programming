@@ -15,12 +15,12 @@ def handle_operation():
     from sys import argv, exit
 
     args_len = len(argv) - 1
-    op = argv[2]
+    ope = argv[2]
 
     if not args_len == 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    elif op != '+' and op != '-' and op != '*' and op != '/':
+    elif ope != '+' and ope != '-' and ope != '*' and ope != '/':
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
