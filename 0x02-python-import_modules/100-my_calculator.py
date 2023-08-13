@@ -29,13 +29,13 @@ def handle_operation():
         b = int(argv[3])
 
         if argv[2] == '+':
-            print("{0} + {1} == {2}".format(a, b, calc.add(a, b)))
+            print("{0} + {1} = {2}".format(a, b, calc.add(a, b)))
         elif argv[2] == '-':
-            print("{0} - {1} == {2}".format(a, b, calc.sub(a, b)))
+            print("{0} - {1} = {2}".format(a, b, calc.sub(a, b)))
         elif argv[2] == '*':
-            print("{0} * {1} == {2}".format(a, b, calc.mul(a, b)))
+            print("{0} * {1} = {2}".format(a, b, calc.mul(a, b)))
         else:
-            print("{0} / {1} == {2}".format(a, b, calc.div(a, b)))
+            print("{0} / {1} = {2}".format(a, b, calc.div(a, b)))
 
 
 
