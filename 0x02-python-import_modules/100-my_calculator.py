@@ -2,7 +2,7 @@
 
 def handle_operation():
     import calculator_1 as calc
-    from sys import argv
+    from sys import argv, exit
 
 
     """
@@ -20,10 +20,10 @@ def handle_operation():
 
     if not args_len == 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        return 1
+        exit(1)
     elif argv[2] != '+' and argv[2] != '-' and argv[2] != '*' and argv[2] != '/': 
         print("Unknown operator. Available operators: +, -, * and /")
-        return 1
+        exit(1)
 
     a = int(argv[1])
     b = int(argv[3])
