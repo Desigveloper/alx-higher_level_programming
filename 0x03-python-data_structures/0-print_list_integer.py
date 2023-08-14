@@ -2,13 +2,13 @@
 
 def print_list_integer(my_list=[]):
     """
-	prints all integers in a given list
+    prints all integers in a given list
 
-	Parameter:
-	    my_list - list to be printed
+    Parameter:
+        my_list - list to be printed
 
-	Return:
-	     none
-	"""
+    Return:
+        none
+    """
     for el in my_list:
         print("{:d}".format(el))
