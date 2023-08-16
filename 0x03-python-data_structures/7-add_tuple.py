@@ -2,6 +2,8 @@
 
 def add_tuple(tuple_a=(), tuple_b=()):
     tuple_c = ()
+    if not tuple_a and not tuple_b:
+        return None
 
     for i in range(2):
         if not tuple_a or len(tuple_a) < 2:
