@@ -9,13 +9,15 @@
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t *slow, *fast, *prev, *next;
+
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
-	listint_t *slow = *head;
-	listint_t *fast = *head;
-	listint_t *prev = NULL;
-	listint_t *next = NULL;
+	slow = *head;
+	fast = *head;
+	prev = NULL;
+	next = NULL;
 
 	/* Find the middle of the linked list using the two-pointer technique */
 	while (fast != NULL && fast->next != NULL)
