@@ -6,9 +6,9 @@ def best_score(a_dictionary):
         return None
 
     # Use dictionary comprehension to create a new dictionary
-	# with keys as values and values as keys
+    # with keys as values and values as keys
     new_dict = {value: key for key, value in a_dictionary.items()
-	if isinstance(value, int)}
+                if isinstance(value, int)}
 
     # Check if new_dictionary is empty
     if not new_dict:
