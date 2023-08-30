@@ -5,5 +5,7 @@
 
 class Square:
     """
-    This class is the template or skeleton for the Square
+    This class is the template/skeleton for the Square
     ""
+
+    pass
