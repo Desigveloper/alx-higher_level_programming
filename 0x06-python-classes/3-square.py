@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- This module defines a class representing a Square
+    This module defines a class representing a Square
 """
 
 
@@ -9,7 +9,7 @@ class Square:
     """
     def __init__(self, size=0):
         """
-            Initializes an instance of the Square classs
+            Initializes an instance of the Square class
 
             Args:
                 size (int, optional): The size of the square. Defaults to 0.
@@ -27,10 +27,10 @@ class Square:
 
     def area(self):
         """
-            A pubic instance methode representing area of Square
+            A pubic instance method representing area of Square
 
             Args:
-                self - first param by convertion of instance method
+                self - first param by convention of instance method
 
             Returns:
                 the current square area
