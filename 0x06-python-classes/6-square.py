@@ -81,7 +81,7 @@ class Square:
             Prints the square in the stdout with the character #
         """
         if self.__size == 0:
-            print()
+            print('')
 
         for p in range(self.__position[1]):
             print()
