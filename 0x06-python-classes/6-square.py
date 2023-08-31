@@ -46,22 +46,21 @@ class Square:
         return self.__position
 
     @position.setter
-    def position(self, value):
+    def position(self, position):
         """
             Initializes the size of an instance
 
             Args:
-                The value passed
+                The positional value
 
             Raises:
-                TypeError: If `size` is not an integer.
-            ValueError: If `size` is less than 0.
+                TypeError: If `position` is not a tuple of 2 integers.
 
         """
-        if isinstance(value, tuple) and len(value) == 2 and \
-                isinstance(value[0], int) and isinstance(value[1], int) \
-                and value[0] >= 0 and value[1] >= 0:
-            self.__position = value
+        if isinstance(position, tuple) and len(position) == 2 and \
+                isinstance(position[0], int) and isinstance(position[1], int) \
+                and position[0] >= 0 and position[1] >= 0:
+            self.__position = position 
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -79,12 +78,12 @@ class Square:
 
     def my_print(self):
         """
-            Prints the sqaure in the stdout with the character #
+            Prints the square in the stdout with the character #
         """
         if self.__size == 0:
             print('')
 
-        for _ in range(self.__position[1]):
+        for p in range(self.position[1]):
             print('')
-        for _ in range(self.__size):
+        for i in range(self.__size):
             print(' ' * self.__position[0] + '#' * self.__size)
