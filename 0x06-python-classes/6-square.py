@@ -58,7 +58,7 @@ class Square:
 
         """
         if isinstance(position, tuple) and len(position) == 2 and \
-                isinstance(position[0], int) and isinstance(position[1], int) \
+                all(isinstance(el, int) for el in position) \
                 and position[0] >= 0 and position[1] >= 0:
             self.__position = position
         else:
