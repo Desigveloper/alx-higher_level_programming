@@ -16,7 +16,7 @@ class MagicClass:
         circumference(self): Calculates and returns the circumference.
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """
         Initializes a MagicClass instance.
 
