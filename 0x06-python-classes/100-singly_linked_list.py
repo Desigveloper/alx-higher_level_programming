@@ -17,7 +17,7 @@ class Node:
                 data(int): The data value of the node
                 next_node: The next node in the linked list.
         """
-        self.__data = data
+        self.data = data
         self.next_node = next_node
 
     @property
@@ -69,7 +69,7 @@ class SinglyLinkedList:
     """
 
     def __init__(self):
-        self.head = None
+        self.__head = None
 
     def sorted_insert(self, value):
         """
@@ -79,13 +79,14 @@ class SinglyLinkedList:
                 value (int): The value to be inserted
         """
         new_node = Node(value)
-        if self.head is None:
-            self.head = new_node
-        elif self.head.data is None or value < self.head.data:
-            new_node.next_node = self.head
-            self.head = new_node
+        if self.__head is None:
+            new_node.next_node = None
+            self.__head = new_node
+        elif value < self.__head.data:
+            new_node.next_node = self.__head
+            self.__head = new_node
         else:
-            curr = self.head
+            curr = self.__head
             while curr.next_node is not None and curr.next_node.data < value:
                 curr = curr.next_node
             new_node.next_node = curr.next_node
@@ -94,9 +95,9 @@ class SinglyLinkedList:
     def __str__(self):
         """ Returns a string representation of the linked list
         """
-        if self.head is None:
+        if self.__head is None:
             return ""
-        current = self.head
+        current = self.__head
         result = str(current.data)
         while current.next_node is not None:
             current = current.next_node
