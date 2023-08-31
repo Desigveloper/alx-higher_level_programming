@@ -68,4 +68,4 @@ class Square:
         return self.__size < other.size
 
     def __le__(self, other):
-       return self.__size <= other.size
+        return self.__size <= other.size
