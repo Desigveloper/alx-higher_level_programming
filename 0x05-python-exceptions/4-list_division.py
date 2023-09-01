@@ -23,6 +23,7 @@ def list_division(my_list_1, my_list_2, list_length):
             if type(dividend) not in valid_types or \
                     type(divisor) not in valid_types:
                 print("wrong type")
+                result.append(0)
             else:
                 try:
                     product = dividend / divisor
