@@ -15,7 +15,7 @@ print(result)
 
 print("--")
 
-"""case: mylist1 = [10, 0, 4] / mylist2 = [2, 4, 0] / list_length = 3"""
+"""case: my_list_1 = [10, 0, 4] / my_list_2 = [2, 4, 0] / list_length = 3"""
 my_l_1 = [10, 0, 4]
 my_l_2 = [2, 4, 0]
 result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
@@ -23,7 +23,7 @@ print(result)
 
 print("--")
 
-"""case: mylist1 = [10, “0”, 4] / mylist2 = [0, 4] / list_length = 3"""
+"""case: my_list_1 = [10, “0”, 4] / my_list_2 = [0, 4] / list_length = 3"""
 my_l_1 = [10, 0, 4]
 my_l_2 = [4, 0]
 result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
