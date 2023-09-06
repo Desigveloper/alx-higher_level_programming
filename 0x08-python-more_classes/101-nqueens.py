@@ -84,11 +84,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     """Check if N is a positive integer greater or equal to 4"""
-    try:
-        N = int(sys.argv[1])
-        if N < 4:
-            raise ValueError
-    except ValueError:
+    N = int(sys.argv[1])
+    if N < 4:
         print("N must be a number and at least 4")
         sys.exit(1)
 
