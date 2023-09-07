@@ -59,9 +59,8 @@ def solve_nqueens(N):
     def solve(board, row):
         if row == N:
             """Found a solution, add it to the solution list"""
-            for i in range(N):
-                print("[{}, {}]".format(i, board[i]), end=' ')
-            print()
+            solution  = [[i, board[i]] for i in range(N)]
+            print(solution)
             return
 
         for col in range(N):
