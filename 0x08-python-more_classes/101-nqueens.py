@@ -83,6 +83,15 @@ if __name__ == "__main__":
         print("Usage: nqueens N")
         sys.exit(1)
 
+     """Check if N is a positive integer greater or equal to 4"""
+    try:
+        N = int(sys.argv[1])
+        if not isinstance(N, int):
+            raise ValueError
+    except ValueError:
+        print("N must be a number")
+        sys.exit(1)
+
     """Check if N is a positive integer greater or equal to 4"""
     try:
         N = int(sys.argv[1])
