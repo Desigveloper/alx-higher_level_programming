@@ -24,11 +24,11 @@ def matrix_divided(matrix, div):
     """
 
     """Check if  matrix is a list of lists of integers or floats"""
-    if not all(isinstance(row, list) and
+    if not all(isinstance(matrix, list) and
                all(isinstance(el, (int, float))
                    for el in row) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of int\
-                        egers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) of \
+                        ./integers/floats")
 
     """Check if each row of matrix has the same size"""
     if len(set(len(row) for row in matrix)) > 1:
@@ -41,6 +41,7 @@ def matrix_divided(matrix, div):
     """Check if div is equal to 0"""
     if div == 0:
         raise ZeroDivisionError("division by zero")
+
     """Dividing each element of matrix by div"""
     new_matrix = [[round(el / div, 2) for el in row] for row in matrix]
 
