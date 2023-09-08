@@ -38,6 +38,9 @@ def matrix_divided(matrix, div):
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
 
+    """Check if div is equal to 0"""
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
     """Dividing each element of matrix by div"""
     new_matrix = [[round(el / div, 2) for el in row] for row in matrix]
 
