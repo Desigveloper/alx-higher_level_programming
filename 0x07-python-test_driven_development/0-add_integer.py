@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """Integer Addition Module"""
 
+
 def add_integer(a, b=98):
-    """ 
+    """
     Adds two integers
-    
     Parameter:
     a(int): The first integer
     b (int): The second integer that defaults to 98 is no arg passes
