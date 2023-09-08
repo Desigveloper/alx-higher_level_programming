@@ -24,8 +24,9 @@ def matrix_divided(matrix, div):
     """
 
     """Check if  matrix is a list of lists of integers or floats"""
-    if not all(isinstance(row, list) and all(isinstance(el, (int, float))
-            for el in row) for row in matrix):
+    if not all(isinstance(row, list) and
+               all(isinstance(el, (int, float))
+                   for el in row) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of \
         integers/floats")
 
