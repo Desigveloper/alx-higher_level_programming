@@ -22,17 +22,20 @@ def matrix_divided(matrix, div):
                 or if div is not a number.
         ZeroDivisionError: If div is equal to 0.
     """
+    type_err = "matrix must be a matrix (list of lists) of integers/floats"
+    size_err = "Each row of the matrix must have the same size"
 
     """Check if  matrix is a list of lists of integers or floats"""
-    if not all(isinstance(matrix, list) and
-               all(isinstance(el, (int, float))
-                   for el in row) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of \
-                        ./integers/floats")
+    if not matrix or not isinstance(matrix, list):
+        raise TypeError(type_err)
+
+    for el in matrix:
+        if not el or not isinstance(el, list):
+            raise TypeError(type_err)
 
     """Check if each row of matrix has the same size"""
     if len(set(len(row) for row in matrix)) > 1:
-        raise TypeError("Each row of the matrix must have the same size")
+        raise TypeError(size_err)
 
     """Check if div is a number"""
     if not isinstance(div, (int, float)):
